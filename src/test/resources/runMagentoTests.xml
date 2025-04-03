@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Magento">
+
+    <listeners>
+        <!--<listener class-name="org.uncommons.reportng.HTMLReporter"/>-->
+        <!--<listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>-->
+        <!--<listener class-name="reportConfig.ReportNGListener"/>-->
+        <!--<listener class-name="reportConfig.ExtentReportsListener"/>-->
+        <!--<listener class-name="reportConfig.AllureReportListener"/>-->
+    </listeners>
+
+    <parameter name="portalUrl" value="https://live.techpanda.org/"/>
+    <parameter name="adminUrl" value="https://live.techpanda.org/index.php/backendlogin"/>
+
+    <test name="FirefoxTest">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="afc.magento.Level_22_Manage_Data_III_JSON"/>
+        </classes>
+    </test>
+
+</suite>
